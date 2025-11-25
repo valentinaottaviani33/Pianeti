@@ -1,0 +1,149 @@
+/* --black: #000000ff;
+--oxford-blue: #14213dff;
+--orange-web: #fca311ff;
+--platinum: #e5e5e5ff;
+--white: #ffffffff; */
+
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "EB Garamond", serif;
+}
+
+abbr {
+  text-decoration: none; /*vado a togliere la sottolineatura sotto ogni tag "abbr" */
+  font-style: italic; /* vado a cambiare il font*/
+}
+
+.bold {
+  font-weight: bold;
+}
+
+div#header {
+  min-height: 250px;
+  background-color: #14213dff;
+  line-height: 250px; /*ho dato le stesse misure per andare a centrare il testo nell'elemento (posso farlo quando ho solamente una riga di testo)*/ 
+}
+
+.sistema-solare__title {
+  text-align: center;
+  margin: 0;
+  font-size: 40px;
+  color: #14213dff;
+  text-transform: capitalize;
+}
+
+.sistema-solare__title--principale {
+  color: #fca311ff;
+  font-size: 60px;
+  text-transform: uppercase; /* rende tutte le lettere maiuscole*/
+  word-spacing: 3px; /*inserisce lo spazio tra le lettere*/
+  text-shadow: 2px 2px 2px #e5e5e5ff; /*da un ombra ad ogni lettera */
+}
+
+div#main { /* div con id main*/
+  background-color: #e5e5e5ff;
+  padding: 20px;
+}
+
+div.sistema-solare {
+  background-color: #fca311ff;
+  padding: 20px;
+  border: 3px solid #000000ff;
+}
+
+.sistema-solare__body {
+  font-size: 19px;
+  line-height: 1.15;
+}
+
+.sistema-solare__body li { /* mi va a prendere gli "li" che si trovano solamente nella classe .sistema-solare__body */
+  list-style-image: url("../../assets/img/icons8-pianeta-8.png");
+}
+
+.pianeta-container {
+  margin: 20px 0 0;
+  font-size: 0;  /*in modo da eliminare lo spazio che si crea tra le card e in questo modo riesco a metterle 3 una accanto all'altra dando il width di 33,333333% */
+}
+
+.pianeta-container__card {
+  width: calc(33.333333% - 20px); /*20px stanno ad indicare il margin che abbiamo aggiunto */
+  border: 2px solid black;
+  padding: 20px 0;
+  display: inline-block; /*vado ad inserirlo in modo tale che la seconda card si affianca alla prima */
+  font-size: 16px; /*vado ad inserire il font-size dato che nel pianeta-container sono andata a toglierlo, cosi da poter fare il calc() all'interno del width di pianeta-card e andare a sottrarre i 20px di margin*/
+  margin: 0 10px 20px; /*qua vado a dire che sopra non devo dare margine, sinistra e destra 10px e sotto 20px in modo che lo 0 iniziale non vale anche per il bottom in modo da non attaccarmi le card ma lasciandomi un margin di 20px */
+}
+
+/* .pianeta-container__card--boundary-left {
+  margin-left: 0;
+  width: calc(33.333333% - 10px);
+} */
+
+/* .pianeta-container__card--boundary-right {
+  margin-right: 0;
+  width: calc(33.333333% - 10px);
+} */
+
+div.pianeta-container__card:nth-of-type(3n+1){
+  margin-left: 0;
+  width: calc(33.333333% - 10px);
+}
+
+div.pianeta-container__card:nth-of-type(3n){
+  margin-right: 0;
+  width: calc(33.333333% - 10px);
+}
+
+.pianeta-container__card h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.pianeta-container__card p {
+  margin: 0; /* vado a togliere il margin di default del p*/
+}
+
+.pianeta-container__head {
+  padding-bottom: 20px; /*vado ad inserire lo stesso spazio che avevo al di sopra centrando in questo modo il testo*/
+  margin-bottom: 20px;
+  border-bottom: 2px ridge black; /*vado ad inserire il bordo sotto*/
+}
+
+.pianeta-container__footer {
+  margin-top: 20px;
+  border-top: 2px ridge black;
+  padding-top: 20px; /*do lo stesso padding che ho dato al body e all'head cosi ho gli stessi spazi*/
+  text-align: center;
+  color: #14213dff;
+  font-size: 20px;
+  cursor: pointer; /*spunta la manina*/
+}
+
+.pianeta-container__body {
+  padding: 0 20px;
+}
+
+div#footer {
+  background-color: #fca311ff;
+  color: #14213dff;
+}
+
+div#footer-container {
+  padding: 20px;
+}
+
+dt,
+dd { /*dato che andava a capo ho messo display inline-block per averlo affianco */
+  display: inline-block;
+  margin: 0;
+}
+
+dt { /*ho dato questa larghezza in modo da poterli allineare*/
+  min-width: 150px;
+}
